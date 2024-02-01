@@ -9,3 +9,13 @@ It's simple... `npm run dev` will build the app and serve it at http://localhost
 
 ## DEBUGGING - Probably the command you want
 This starts the node server with a debug port running. You can then open `Chrome`, go to `chrome://inspect/#devices` and select your web server as the target.
+
+## TESTING - MANUALLY
+I'm using JetBrains as my IDE, which comes with a client that sends HTTP requests
+
+Take a look at `HTTP_LUNCH_ITEMS.http`. You can run this file using a VS Code
+Plugin called "REST Client"
+
+You first need to send the POST request, `POST http://localhost:3000/auth`
+then you can run the next request
+`GET http://localhost:3000/lunchitems`
