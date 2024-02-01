@@ -3,3 +3,6 @@ node_modules/
 # exclude transpiled JS and mappings
 **/*.js
 **/*.map
+
+# exclude MAC_OS files
+.DS_Store
