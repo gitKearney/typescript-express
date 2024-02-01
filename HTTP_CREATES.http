@@ -1,0 +1,20 @@
+
+### Create a new user
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+  "email": "jenny.green@example.com",
+  "passwd": "abc246!!"
+}
+
+### Create a new person tied to a user
+@auth_token = auth_token
+POST http://localhost:3000/user/person
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "last": "Jenny",
+  "first": "Green"
+}

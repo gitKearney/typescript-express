@@ -1,0 +1,15 @@
+### (PART 1) Get an auth token
+POST http://localhost:3000/auth
+Content-Type: application/json
+
+{
+  "email": "jenny.green@example.com",
+  "passwd": "abc246!!"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}
+
+### (PART 2) run the query
+GET http://localhost:3000/lunchitems
+Authorization: Bearer {{auth_token}}
+Accept: application/json

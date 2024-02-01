@@ -1,0 +1,33 @@
+{
+  "name": "scratch-ts",
+  "version": "1.0.0",
+  "description": "A scratch TypeScript project",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon ./index.js\"",
+    "debug": "concurrently \"npx tsc --watch\" \"nodemon --inspect ./index.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kearney J Taaffe",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "argon2": "^0.31.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mariadb": "^3.2.3",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.10.6",
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1",
+    "prettier": "3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "type": "module"
+}

@@ -1,0 +1,10 @@
+### (PART 1) Get an auth token
+POST http://localhost:3000/auth
+Content-Type: application/json
+
+{
+  "email": "admin",
+  "passwd": "abc246!!"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}

@@ -1,0 +1,17 @@
+services:
+  mariadb:
+    container_name: maria10_6
+    image: mariadb:10.4.26
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: super_secret
+      MARIADB_PASSWORD: my_cool_secret
+      MARIADB_USER: demo_user
+      MARIADB_DATABASE: demo
+    ports:
+      - "3306:3306"
+    networks:
+      - internal
+networks:
+  internal:
+    driver: bridge

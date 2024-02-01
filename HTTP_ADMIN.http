@@ -1,0 +1,6 @@
+@auth_token = auth_token
+
+### Get all user lunch orders
+GET http://localhost:3000/admin/user-lunch-order
+Authorization: Bearer {{auth_token}}
+Accept: application/json
