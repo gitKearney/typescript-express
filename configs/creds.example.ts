@@ -1,3 +1,4 @@
+// TODO: copy to `creds.ts`
 export const DB_CREDS = {
   user: "demo_user",
   password: "my_cool_secret",
@@ -8,3 +9,4 @@ export const DB_CREDS = {
 };
 
 export const JWT_SECRET = "Rumpelstiltskin";
+export const SKIP_JWT = false;

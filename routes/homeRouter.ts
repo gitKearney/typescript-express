@@ -14,6 +14,7 @@ export const homeRouter = () => {
   });
 
   router.get("/test", async (req: Request, res: Response) => {
+    console.log("session id ", req.sessionID);
     const sql = "SELECT first_name, last_name FROM people";
     const rs = await run(sql, {});
     res.send(rs);

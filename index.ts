@@ -1,5 +1,6 @@
 import express, { Express, NextFunction, Request, Response } from "express";
 import cors from "cors";
+import session from "express-session";
 
 import path from "node:path";
 import { fileURLToPath } from "url";
@@ -23,7 +24,11 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   next();
 });
 
+// accept CORS requests and set session info
 app.use(cors());
+app.set("trust proxy", 1);
+app.use(session({ secret: "session passcode", name: "sessionId" }));
+
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/home", homeRouter());
 app.use("/user", userRouter());
